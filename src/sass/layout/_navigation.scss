@@ -1,0 +1,152 @@
+.navigation{
+
+    &__checkbox{
+        display:none;
+    
+    }
+
+
+    &__button{
+        background-color:rgba($c-white, 1);
+        width:6rem;
+        height:6rem;
+        border-radius:50%;
+        box-shadow: .2rem .2rem .2rem rgba($c-black,.7);
+        text-align: center;
+        cursor: pointer;
+        position:fixed;
+        top:3rem;
+        right:3rem;
+        z-index: 2000;
+    
+    
+    
+    }
+
+
+
+
+   
+    &__background{
+        height: 100%;
+        width:0;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index: 1000;
+        background-color:$c-white;
+        transition:width .3s;
+        border-left: 1px solid rgba($c-p,.2);
+      
+    }
+    &__nav{
+        
+position:relative;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);     
+        
+        
+    }
+    &__list{
+   
+    list-style-type:none;
+
+    }
+    &__item{
+        display:block;
+        padding:.5rem 0 ;
+        text-align: center;
+        width: 80%;
+        margin: auto auto;
+        font-size:1.5rem;
+
+        @media only screen and (min-width:900px){
+font-size:2rem;
+        }
+        &:not(:last-child){
+            border-bottom:1px solid rgba($c-grey-dark-3,.2);
+        
+
+        }
+    }
+    &__link{
+        text-decoration: none;
+        font-weight: 600;
+        text-transform:uppercase;
+        color: $c-grey-dark-3;
+        letter-spacing: 1px;
+
+    }
+
+
+
+
+    &__icon{
+        position: relative;
+        margin-top:3rem;
+        &,
+        &::before,
+        &::after{
+            width:3.5rem;
+            height: 3px;
+            background-color: $c-grey-dark-2;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after{
+            content:"";
+            position:absolute;
+            left:0;
+        }
+
+        &::before{
+            top:-.6rem;
+        }
+        &::after{
+            top:.6rem;
+        }
+
+
+
+    }
+
+
+    &__checkbox:checked ~ &__background{
+
+        width:100%;
+        @media only screen and (min-width:900px){
+            width:30%;
+        }
+        
+        }
+        &__checkbox:checked + &__button &__icon {
+            background-color: transparent;
+        }
+        
+        &__checkbox:checked + &__button &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+        
+        &__checkbox:checked + &__button &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+        
+}
+
+.logo-navigation{
+position:absolute;
+bottom:10%;
+left:50%;
+transform:translateX(-50%);
+ width:20%;
+
+ @media only screen and (min-width:480px){
+     width:10%;
+     bottom:2%;
+ }
+ 
+}

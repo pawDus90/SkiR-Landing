@@ -1,0 +1,37 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// utilities
+
+
+.u-center-text { text-align: center !important; }
+
+.u-mb-small { margin-bottom: 2rem !important; }
+.u-mb-medium { margin-bottom: 6rem !important;}
+.u-mb-big { margin-bottom: 8rem !important;}
+.u-mb-huge { margin-bottom: 10rem !important;}
+
+
+.u-mt-small { margin-top: 2rem !important; }
+.u-mt-medium { margin-top: 6rem !important; }
+.u-mt-big { margin-top: 8rem !important; }
+.u-mt-huge { margin-top: 10rem !important; }
+
+//negative
+.u-nmb-small { margin-bottom: -4rem !important; }
+.u-nmb-medium { margin-bottom: -6rem !important;}
+.u-nmb-big { margin-bottom: -8rem !important;}
+.u-nmb-huge { margin-bottom: -10rem !important;}
+
+
+.u-nmt-small { margin-top: -4rem !important; }
+.u-nmt-medium { margin-top: -6rem !important; }
+.u-nmt-big { margin-top: -8rem !important; }
+.u-nmt-huge { margin-top: -10rem !important; }
+
+

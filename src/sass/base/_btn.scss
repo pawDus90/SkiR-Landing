@@ -1,0 +1,98 @@
+
+.btn-1{
+    transition: all .2s;
+    position: relative;
+ &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &,
+    &:link,
+    &:visited{
+        font-family: 'Arvo', serif;
+
+        text-transform: uppercase;
+        text-decoration:none;
+        border-radius:100px;
+        font-weight: 400;
+        border:none;
+        box-shadow: 0 .5rem 2rem $c-black;
+        margin-bottom: 2rem;
+        display:inline-block;
+    }
+  
+        transition: all .2s;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($c-black,.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+
+    &--blue{
+    color:$c-white;
+    background-color:$c-p2;
+    padding:1.3rem 5rem;
+    font-size:1.5rem;
+    &::after {
+        background-color: $c-p2;
+    }
+
+    }
+   &--white{
+        background-color: rgba($c-white, .7);
+        color:$c-grey-dark-3;
+        padding:1rem 2rem;
+        font-size:1.5rem;
+        font-weight:600 !important;
+        &::after {
+            background-color: $c-white;
+        }
+    }
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+  }
+.btn-text{
+display: inline-block;
+font-size:2rem;
+    
+&,
+&:visited{
+    color:$c-p1;
+    text-decoration: none;
+    border-bottom: 1px solid $c-p1;
+    padding:3px;
+    transition: all .2s;
+  
+}
+
+
+&:hover {
+    background-color: $c-p1;
+    color: $c-white;
+    box-shadow: 0 1rem 2rem rgba($c-black, .15);
+    transform: translateY(-2px);
+}
+
+&:active {
+    box-shadow: 0 .5rem 1rem rgba($c-black, .15);
+    transform: translateY(0);
+}
+
+}
